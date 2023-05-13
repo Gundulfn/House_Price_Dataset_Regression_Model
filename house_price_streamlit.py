@@ -66,7 +66,8 @@ if add_radio == "House Price Estimation":
                         'Linear feet of street connected to property', 'Masonry veneer area in square feet', 'How much years passed from add ?',
                         'How much years passed from built', 'Rates the overall material and finish of the house', 'Total rooms above grade (does not include bathrooms)',
                         'Bedrooms above grade (does NOT include basement bedrooms)', 'Number of fireplaces', 'Full bathrooms above grade']
-
+    
+    # simplification 
     df["YearBuilt"] = 2023 - df["YearBuilt"]
     df["YearRemodAdd"] = 2023 - df["YearRemodAdd"]                    
 
