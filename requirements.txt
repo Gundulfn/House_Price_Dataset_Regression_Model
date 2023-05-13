@@ -4,3 +4,10 @@ pickleshare==0.7.5
 scikit-learn==1.0.2
 Streamlit 
 xgboost
+plotly 
+matplotlib.pyplot 
+seaborn 
+warnings
+from PIL import Image
+from category_encoders import TargetEncoder
+import pickle
