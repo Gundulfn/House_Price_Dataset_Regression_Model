@@ -2,6 +2,5 @@ pandas
 numpy
 Streamlit 
 xgboost
-matplotlib.pyplot
 PIL
 pickle
