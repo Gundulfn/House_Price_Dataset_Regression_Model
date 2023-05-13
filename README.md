@@ -7,7 +7,7 @@ This project was developed to estimate House Price Value using House Price Datas
 [House Price Dataset](https://www.kaggle.com/datasets/lespin/house-prices-dataset)
 
 ## Data Examination
-You can download to your computer and examine it.\n
+You can download to your computer and examine it./n
 [Data Examination](Data_Profiling_v1.html)
 
 ## Model
