@@ -6,8 +6,7 @@ Streamlit
 xgboost
 matplotlib.pyplot 
 seaborn 
-warnings
 Image
-import TargetEncoder
+TargetEncoder
 pickle
 
