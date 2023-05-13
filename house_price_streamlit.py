@@ -50,6 +50,10 @@ if add_radio == "Data Preview":
     
 if add_radio == "House Price Estimation":
 
+    # simplification 
+    df["YearBuilt"] = 2023 - df["YearBuilt"]
+    df["YearRemodAdd"] = 2023 - df["YearRemodAdd"] 
+    
     variables_list=['GrLivArea', '1stFlrSF', 'TotalBsmtSF', 'LotArea', 'BsmtFinSF1', 'GarageArea',
                     'LotFrontage', 'MasVnrArea', 'YearRemodAdd', 'YearBuilt', 'Neighborhood', 'OverallQual',
                     'TotRmsAbvGrd', 'Exterior1st', 'BsmtFinType1', 'BedroomAbvGr', 'Fireplaces', 'SaleCondition',
@@ -67,9 +71,7 @@ if add_radio == "House Price Estimation":
                         'How much years passed from built', 'Rates the overall material and finish of the house', 'Total rooms above grade (does not include bathrooms)',
                         'Bedrooms above grade (does NOT include basement bedrooms)', 'Number of fireplaces', 'Full bathrooms above grade']
     
-    # simplification 
-    df["YearBuilt"] = 2023 - df["YearBuilt"]
-    df["YearRemodAdd"] = 2023 - df["YearRemodAdd"]                    
+                      
 
     box_list = []
     slider_list = []
