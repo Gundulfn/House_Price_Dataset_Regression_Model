@@ -11,7 +11,7 @@ You can download to your computer and examine it.
 [Data Examination](Data_Profiling_v1.html)
 
 ## Model
-XGBRegressor
+[XGBRegressor](https://machinelearningmastery.com/xgboost-for-regression/)
 
 ## Presentatiton
 The model results were presented using Streamlit at the link below
