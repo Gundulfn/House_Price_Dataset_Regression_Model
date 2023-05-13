@@ -7,7 +7,7 @@ xgboost
 matplotlib.pyplot 
 seaborn 
 warnings
-from PIL import Image
-from category_encoders import TargetEncoder
-import pickle
+Image
+import TargetEncoder
+pickle
 
