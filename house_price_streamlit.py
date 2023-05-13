@@ -2,10 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
-import warnings
-warnings.simplefilter(action="ignore", category=Warning)
-from bokeh.plotting import figure
 from PIL import Image
 from category_encoders import TargetEncoder
 import pickle
