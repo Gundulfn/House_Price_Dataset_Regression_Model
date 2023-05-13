@@ -130,7 +130,10 @@ if add_radio == "House Price Estimation":
         
     df.drop("Id", inplace=True,axis=1)
     df.drop("SalePrice", inplace=True,axis=1)
-    target_encoder = pickle.load(open(r"Target_Encoder.sav", 'rb'))
+    
+    with open(r"Target_Encoder.sav", 'rb') as f:
+        target_encoder = pickle.load(f,  encoding='latin1’)
+    #target_encoder = pickle.load(open(r"Target_Encoder.sav", 'rb'))
     
     df3 = pd.DataFrame(target_encoder.transform(df),index = df.index,columns = df.columns)
 
@@ -138,9 +141,11 @@ if add_radio == "House Price Estimation":
     newdata=pd.DataFrame(df3.iloc[[-1]])
 
     # Load already trained model (XGBoost)
+    with open(r"regression_model.sav", 'rb') as f:
+        lr = pickle.load(f,  encoding='latin1’) 
+                                     
+    #lr = pickle.load(open(r"regression_model.sav", 'rb'))
     
-    lr = pickle.load(open(r"regression_model.sav", 'rb'))
-
     
     ypred = lr.predict(newdata)
     st.write("### The value of the house which the features you choose:")
