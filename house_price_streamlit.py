@@ -10,6 +10,9 @@ st.set_page_config(page_title="House Price Estimation Model")
 
 st.write("## House Price Dataset - Regression Analysis")
 df = pd.read_csv(r"house_price.csv")
+# simplification 
+df["YearBuilt"] = 2023 - df["YearBuilt"]
+df["YearRemodAdd"] = 2023 - df["YearRemodAdd"]
 
 with st.sidebar:
     add_radio = st.radio(
@@ -49,10 +52,6 @@ if add_radio == "Data Preview":
     st.write(" #### The Best 25 Determinative Variables For House Price")
     
 if add_radio == "House Price Estimation":
-
-    # simplification 
-    df["YearBuilt"] = 2023 - df["YearBuilt"]
-    df["YearRemodAdd"] = 2023 - df["YearRemodAdd"] 
     
     variables_list=['GrLivArea', '1stFlrSF', 'TotalBsmtSF', 'LotArea', 'BsmtFinSF1', 'GarageArea',
                     'LotFrontage', 'MasVnrArea', 'YearRemodAdd', 'YearBuilt', 'Neighborhood', 'OverallQual',
