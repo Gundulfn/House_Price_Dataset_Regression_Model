@@ -3,8 +3,7 @@ numpy
 scikit-learn==1.0.2
 Streamlit 
 xgboost
-matplotlib.pyplot 
-seaborn 
+matplotlib
 Image
 TargetEncoder
 pickle
