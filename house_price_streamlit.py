@@ -127,7 +127,8 @@ if add_radio == "House Price Estimation":
 
     for i in delete:
         df.drop(labels= i, axis=1, inplace=True)
-        
+    df["YearBuilt"] = 2023 - df["YearBuilt"]
+    df["YearRemodAdd"] = 2023 - df["YearRemodAdd"]    
     df.drop("Id", inplace=True,axis=1)
     df.drop("SalePrice", inplace=True,axis=1)
     
