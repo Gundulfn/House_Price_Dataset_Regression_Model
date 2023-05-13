@@ -115,7 +115,7 @@ if add_radio == "House Price Estimation":
     input_dict = {**box_dict, **slider_dict}
     dictf = pd.DataFrame(input_dict, index=[0])
     #df = df.append(dictf, ignore_index= True) 
-    df = pd.concat([df, dictf, ignore_index=True)
+    df = pd.concat([df, dictf], ignore_index=True)
 
     delete = ["Street", "Alley", "LotShape", "Utilities", "Condition2", "RoofMatl", "BsmtFinType2", "Heating", "KitchenQual", 
           "Functional", "FireplaceQu", "GarageQual", "GarageCond",  "PoolQC", "Fence", "MiscFeature",
