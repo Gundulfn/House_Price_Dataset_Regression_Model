@@ -4,3 +4,4 @@ xgboost
 Image
 matplotlib
 streamlit==1.12.2
+altair==4.0
