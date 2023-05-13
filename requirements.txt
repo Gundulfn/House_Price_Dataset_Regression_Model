@@ -11,3 +11,4 @@ warnings
 from PIL import Image
 from category_encoders import TargetEncoder
 import pickle
+import plotly.express
