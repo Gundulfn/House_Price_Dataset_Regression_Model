@@ -1,7 +1,6 @@
 pandas
 numpy
-Streamlit 
 xgboost
 PIL
-pickle
 matplotlib
+streamlit==1.12.2
