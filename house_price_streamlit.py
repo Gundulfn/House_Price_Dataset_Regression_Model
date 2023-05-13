@@ -89,9 +89,6 @@ if add_radio == "House Price Estimation":
     for var1, var2 in zip(slider_list, slider_desc_list):
         slider_overall_dict.update({var1: var2})
 
-    print(box_overall_dict)
-    print(slider_overall_dict)
-
     # Displaying box and slider with functions
     def showing_box(var, desc):
             cycle_option = list(df[var].unique())#
@@ -101,9 +98,6 @@ if add_radio == "House Price Estimation":
     def showing_slider(var, desc):
             slider = st.sidebar.slider(label= f"{desc}", min_value=round(df[var].min()), max_value=round(df[var].max()))
             return slider
-
-    print(box_list)
-    print(slider_list)
 
 
     # Collecting user inputs in dictionaries
@@ -116,15 +110,12 @@ if add_radio == "House Price Estimation":
     for key, value in slider_overall_dict.items():
         slider_dict.update({key: showing_slider(key, value)})
 
-    print(box_dict)
-    print(slider_dict)
-
 
     # Keeping inputs in a dic
     input_dict = {**box_dict, **slider_dict}
     dictf = pd.DataFrame(input_dict, index=[0])
-    df = df.append(dictf, ignore_index= True) 
-
+    #df = df.append(dictf, ignore_index= True) 
+    df = pd.concat([df, dictf, ignore_index=True)
 
     delete = ["Street", "Alley", "LotShape", "Utilities", "Condition2", "RoofMatl", "BsmtFinType2", "Heating", "KitchenQual", 
           "Functional", "FireplaceQu", "GarageQual", "GarageCond",  "PoolQC", "Fence", "MiscFeature",
