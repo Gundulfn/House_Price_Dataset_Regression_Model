@@ -4,3 +4,4 @@ Streamlit
 xgboost
 PIL
 pickle
+RendererAgg
