@@ -9,7 +9,7 @@ import pickle
 st.set_page_config(page_title="House Price Estimation Model")
 
 st.write("## House Price Dataset - Regression Analysis")
-df = pd.read_csv(r"C:\Users\Asus\Desktop\kodluyoruz\hafta_2\house_price.csv")
+df = pd.read_csv(r"house_price.csv")
 
 with st.sidebar:
     add_radio = st.radio(
@@ -44,7 +44,7 @@ if add_radio == "Data Preview":
              "BsmtFinSF2-", "LowQualFinSF-", "KitchenAbvGr-", "EnclosedPorch-", "3SsnPorch-", "ScreenPorch-", "PoolArea-","MiscVal-", "MoSold-",
              "YrSold-", "BsmtUnfSF-", "2ndFlrSF-", "BsmtFullBath-", "BsmtHalfBath-", "HalfBath-", 'WoodDeckSF-', 'OpenPorchSF')
 
-    image = Image.open(r"C:\Users\Asus\Desktop\kodluyoruz\hafta_2\feature_importance.png")
+    image = Image.open(r"feature_importance.png")
     st.image(image ,width=800)
     st.write(" #### The Best 25 Determinative Variables For House Price")
     
@@ -139,7 +139,7 @@ if add_radio == "House Price Estimation":
         
     df.drop("Id", inplace=True,axis=1)
     df.drop("SalePrice", inplace=True,axis=1)
-    target_encoder = pickle.load(open(r"C:\Users\Asus\Desktop\kodluyoruz\hafta_2\Target_Encoder.sav", 'rb'))
+    target_encoder = pickle.load(open(r"Target_Encoder.sav", 'rb'))
     
     df3 = pd.DataFrame(target_encoder.transform(df),index = df.index,columns = df.columns)
 
@@ -148,14 +148,14 @@ if add_radio == "House Price Estimation":
 
     # Load already trained model (XGBoost)
     
-    lr = pickle.load(open(r"C:\Users\Asus\Desktop\kodluyoruz\hafta_2\regression_model.sav", 'rb'))
+    lr = pickle.load(open(r"regression_model.sav", 'rb'))
 
     
     ypred = lr.predict(newdata)
     st.write("### The value of the house which the features you choose:")
     st.title(str(np.round(ypred[0]))+" $")
 
-    image = Image.open(r"C:\Users\Asus\Desktop\kodluyoruz\hafta_2\house.png")
+    image = Image.open(r"house.png")
     st.image(image ,width=800)
     
     st.write("### The Results of XGBRegressor Model")
