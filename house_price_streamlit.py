@@ -31,14 +31,11 @@ if add_radio == "Data Preview":
     option = st.selectbox(
         '### Please Choose A Variable That You Want to Examine',
         df.columns.to_list())
-    from matplotlib.backends.backend_agg import RendererAgg
-    _lock = RendererAgg.lock
-
-    with _lock:
-        arr = df[option]
-        fig, ax = plt.subplots()
-        ax.hist(arr, bins=20)
-        st.pyplot(fig)
+    
+    arr = df[option]
+    fig, ax = plt.subplots()
+    ax.hist(arr, bins=20)
+    st.pyplot(fig)
 
     st.write("### The Columns That Won't Evaluate To Improve The Results:")
 
