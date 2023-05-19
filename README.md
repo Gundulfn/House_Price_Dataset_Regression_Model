@@ -18,3 +18,10 @@ You can download to your computer and examine it.
 The model results were presented using Streamlit at the link below
 
 [Streamlit](https://serdarekiz-house-price-dataset-reg-house-price-streamlit-11b3vp.streamlit.app/)
+
+## Prepared By
+[Serdar Ekiz](https://github.com/serdarekiz)
+
+[Olkan Berke Gölbaşı](https://github.com/OlkanBerke)
+
+[Burak Can Çiftçi](https://github.com/Gundulfn)
